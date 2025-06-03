@@ -5,12 +5,12 @@ const ProductCard = ({ title, price, description, image }) => {
   const [readmore, setReadmore] = useState(false);
 
   return (
-    <article className="h-full flex flex-col max-w-sm  rounded-lg shadow-md overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300">
+    <article className="h-full flex flex-col max-w-xs  rounded-lg shadow-md overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300">
       <div className="aspect-w-3 aspect-h-4 overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-64 object-contain hover:scale-105 transition-transform duration-300"
+          className="w-full h-32 object-contain  transition-transform duration-300"
         />
       </div>
 

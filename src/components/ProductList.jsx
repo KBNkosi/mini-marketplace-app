@@ -34,10 +34,12 @@ const ProductList = () => {
   }
 
   return (
-<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12">
+<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-y-12  p-4">
  {productData.map((product)=>(
-   
-     <ProductCard key={product.id} {...product}/>
+     <div  key={product.id} className=" pl-12" >
+         <ProductCard {...product}  />
+     </div>
+     
    
  ))}
   </section>
