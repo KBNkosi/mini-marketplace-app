@@ -22,7 +22,7 @@ const ProductCard = ({ title, price, description, image }) => {
       </div>
       <div className="p-4">
         <p className="text-gray-600 text-sm mb-4 flex-grow">
-          {readmore ? description : `${description.substring(0, 150)}...`}
+          {readmore ? description : `${description.substring(0, 50)}...`}
           <button
             className="cursor-pointer ml-1 text-green-600 hover:text-green-800"
             onClick={() => setReadmore(!readmore)}
@@ -31,7 +31,7 @@ const ProductCard = ({ title, price, description, image }) => {
           </button>
         </p>
         
-        <button className="border-2 my-1 w-[40%] bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors duration-200  ">
+        <button className="border-2 my-1 w-[40%] bg-green-600 text-white p-2 rounded-lg hover:bg-green-700 transition-colors duration-200  ">
           Add to cart
         </button>
       </div>
