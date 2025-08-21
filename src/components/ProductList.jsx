@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 
-
 const ProductList = () => {
   const [productData, setProductData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -35,16 +34,25 @@ const ProductList = () => {
   }
 
   return (
-<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3   gap-y-12  p-4">
- {productData.map((product)=>(
-     <div  key={product.id} className=" pl-12" >
-         <ProductCard {...product}  />
-     </div>
-     
-   
- ))}
-  </section>
-  )
+    <>
+    <section>
+      <div>
+       <span>Home</span>
+       <span>Products</span>
+      </div>
+     <h2>Products</h2>
+     <input type="text" placeholder="search products" />
+       
+    </section>
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3   gap-y-12  p-4">
+        {productData.map((product) => (
+          <div key={product.id} className=" pl-12">
+            <ProductCard {...product} />
+          </div>
+        ))}
+      </section>
+    </>
+  );
 };
 
 export default ProductList;
