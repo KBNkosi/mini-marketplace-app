@@ -1,15 +1,17 @@
-import ProductList from './components/ProductList'
-
-
+import ProductList from './components/ProductList';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
-  
-
   return (
-    <main className='font-display'>
-     <ProductList />
-    </main>
-  )
+    <>
+      <Navbar />
+      <Hero />
+      <main className='font-display'>
+        <ProductList />
+      </main>
+    </>
+  );
 }
 
 export default App

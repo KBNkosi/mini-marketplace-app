@@ -22,7 +22,7 @@ const ProductCard = ({ title, price, description, image }) => {
       </div>
       <div className="p-4">
         <p className="text-gray-600 text-sm mb-4 flex-grow">
-          {readmore ? description : `${description.substring(0, 50)}...`}
+          {readmore ? description : `${description.substring(0, 30)}...`}
           <button
             className="cursor-pointer ml-1 text-green-600 hover:text-green-800"
             onClick={() => setReadmore(!readmore)}
