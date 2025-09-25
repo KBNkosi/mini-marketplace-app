@@ -65,12 +65,9 @@ const ProductList = () => {
 
   return (
     <>
-      <section>
-        <div>
-          <span>Home</span>
-          <span>Products</span>
-        </div>
-        <h2>Products</h2>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <h2 className="text-4xl font-bold mb-4 mt-12 text-center">Products</h2>
         <div className="flex gap-4 mb-4">
           <input
             type="text"
@@ -96,7 +93,7 @@ const ProductList = () => {
 
       {isDrawerOpen && (
         <div className="fixed inset-0 z-50 overflow-hidden">
-          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsDrawerOpen(false)}></div>
+          <div className="absolute inset-0 bg-transparent bg-opacity-50" onClick={() => setIsDrawerOpen(false)}></div>
           <div className="absolute right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
